@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Resume</title>
+    <meta name="description" content="" />
+    <link rel="shortcut icon" href="./assets/briefcase.png" type="image/x-icon" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:title" content="Title of the project" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/PaulleDemon" />
+    <!--Replace with the current website url-->
+    <meta property="og:image" content="" />
+
+    <!-- <link rel="stylesheet" href="../../tailwind-css/tailwind-runtime.css" /> -->
+    <link rel="stylesheet" href="./css/tailwind-build.css" />
+    <link rel="stylesheet" href="css/index.css" />
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+    <header
+        class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around">
+        <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="">
+            Portfolio
+        </a>
+        <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+            <div
+                class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+                <a class="header-links" href="skills.html"> Skills </a>
+                <a class="header-links" href="experience.html"> Experience </a>
+                <a class="header-links" href="project.html"> Projects </a>
+                <a class="header-links" href="resume.html"> Resume </a>
+            </div>
+            <div
+                class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center">
+                <a href="Contact.html" aria-label="signup"
+                    class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
+                    <span>Contact Me</span>
+                    <div
+                        class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black">
+                        <i class="bi bi-telephone"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <!-- Below button tag line is for mobile view -->
+        <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+            onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+    </header>
+
+    <section
+        class="tw-relative tw-flex tw-min-h-[100vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden max-lg:tw-p-4 max-md:tw-mt-[50px]">
+        <div
+            class="tw-flex tw-h-full tw-min-h-[100vh] tw-w-full tw-place-content-center tw-gap-6 tw-p-[5%] max-xl:tw-place-items-center max-lg:tw-flex-col">
+            <!-- LEFT CONTENT -->
+            <div class="tw-flex tw-flex-col tw-place-content-center">
+                <div
+                    class="tw-flex tw-flex-wrap tw-text-7xl tw-font-semibold tw-uppercase tw-leading-[85px] max-lg:tw-text-4xl max-md:tw-leading-snug">
+                    <div class="hero-name">
+                        <span
+                            class="reveal-hero-text tw-bg-gradient-to-r tw-from-blue-100 tw-to-blue-300 tw-p-1 tw-px-6 tw-rounded-lg tw-transition tw-duration-300 hover:tw-from-blue-300 hover:tw-to-blue-500"
+                            style="background-color: #ADD8E6;">
+                            Sandeepkanna S
+                        </span>
+                    </div>
+
+                    <br />
+                    <span class="reveal-hero-text" id="dynamic-profession"
+                        style="transition: opacity 0.5s ease;"></span>
+
+                    <!-- Dynamic Profession Script -->
+                    <script>
+                        const professions = [
+                            "Computer Science Graduate",
+                            "Python Full Stack Developer",
+                            "Web Developer",
+
+                        ];
+
+                        let index = 0;
+                        const professionElement = document.getElementById("dynamic-profession");
+
+                        function updateProfession() {
+                            professionElement.style.opacity = 0;
+
+                            setTimeout(() => {
+                                professionElement.textContent = professions[index];
+                                index = (index + 1) % professions.length;
+                                professionElement.style.opacity = 1;
+                            }, 500);
+                        }
+
+                        updateProfession();
+                        setInterval(updateProfession, 2000);
+                    </script>
+                </div>
+
+                <!-- DESCRIPTION -->
+                <div class="reveal-hero-text tw-mt-2 tw-max-w-[450px] tw-p-2 tw-text-justify max-lg:tw-max-w-full">
+                    Motivated Computer Science graduate with strong foundations in Python, Django,
+                    and modern web technologies. Passionate about building responsive, user-friendly
+                    applications and solving real-world problems through clean and scalable code.
+                    Seeking opportunities to grow as a full-stack developer in a collaborative team.
+                </div>
+
+                <!-- BUTTON -->
+                <div class="reveal-hero-text tw-mt-4 tw-flex tw-place-items-center tw-gap-4 tw-overflow-hidden tw-p-2">
+                    <a href="contact.html" aria-label="contact"
+                        class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-border-[1px] tw-border-black tw-bg-white tw-p-1 tw-pl-4 tw-text-black tw-transition-colors tw-duration-[0.5s] hover:tw-bg-black hover:tw-text-white">
+                        <span>Contact Me</span>
+                        <div
+                            class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-black tw-font-semibold tw-text-white">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT IMAGE -->
+            <div
+                class="tw-flex tw-w-full tw-max-w-[50%] tw-place-content-center tw-place-items-center tw-overflow-hidden max-lg:tw-max-w-[unset]">
+                <div
+                    class="tw-relative tw-flex tw-max-h-[580px] tw-min-h-[450px] tw-min-w-[350px] tw-max-w-[650px] tw-overflow-hidden max-lg:tw-h-fit max-lg:tw-max-h-[320px] max-lg:tw-min-h-[180px] max-lg:tw-w-[320px] max-lg:tw-min-w-[320px]">
+                    <img src="./assets/images/home/me.jpeg" alt="Sandeep Profile"
+                        class="reveal-hero-img tw-z-[1] tw-h-full tw-w-full tw-object-contain" />
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section
+        class="tw-relative tw-flex tw-min-h-[80vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-place-content-center tw-place-items-center tw-overflow-hidden tw-p-6"
+        id="soft-skills">
+        <div class="tw-mt-8 tw-flex tw-flex-col tw-place-items-center tw-gap-5">
+
+            <!-- Heading -->
+            <div class="reveal-up tw-mt-5 tw-flex tw-flex-col tw-gap-3 tw-text-center">
+                <h2 class="tw-font-bold tw-tracking-tight" style="font-size: 50px;"> Soft Skills </h2>
+            </div>
+            <!-- Skills Grid -->
+            <div
+                class="tw-mt-6 tw-flex tw-max-w-[60%] tw-flex-wrap tw-place-content-center tw-gap-2 max-lg:tw-max-w-full max-lg:tw-flex-col">
+                <!-- Communication -->
+                <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                    <div class="tw-flex tw-gap-2 tw-items-center">
+                        <i class="bi bi-megaphone tw-text-2xl"></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">
+                            Communication Skills
+                        </h3>
+                    </div>
+                    <div class="tw-text-[#595959]">
+                        Clear verbal and written communication skills for explaining technical concepts,
+                        collaborating with teams, and understanding project requirements.
+                    </div>
+                </div>
+
+                <!-- Problem Solving -->
+                <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                    <div class="tw-flex tw-gap-2 tw-items-center">
+                        <i class="bi bi-lightbulb tw-text-2xl"></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">
+                            Problem Solving
+                        </h3>
+                    </div>
+                    <div class="tw-text-[#595959]">
+                        Ability to analyze problems, debug issues, and implement efficient solutions
+                        using logical thinking and structured approaches.
+                    </div>
+                </div>
+
+                <!-- Adaptability -->
+                <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                    <div class="tw-flex tw-gap-2 tw-items-center">
+                        <i class="bi bi-arrow-repeat tw-text-2xl"></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">
+                            Adaptability
+                        </h3>
+                    </div>
+                    <div class="tw-text-[#595959]">
+                        Comfortable learning new frameworks, tools, and workflows while adapting
+                        quickly to changing project requirements.
+                    </div>
+                </div>
+
+                <!-- Fast Learner -->
+                <div class="reveal-up tw-flex tw-h-[150px] tw-w-[350px] tw-flex-col tw-gap-2 tw-p-4">
+                    <div class="tw-flex tw-gap-2 tw-items-center">
+                        <i class="bi bi-rocket-takeoff tw-text-2xl"></i>
+                        <h3 class="tw-text-2xl tw-font-semibold">
+                            Fast Learner
+                        </h3>
+                    </div>
+                    <div class="tw-text-[#595959]">
+                        Strong enthusiasm for continuous learning, enabling quick understanding of
+                        new technologies and effective contribution to development tasks.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section>
+
+    <!-- STYLES -->
+    <style>
+        .side-row {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        @media (min-width: 768px) {
+            .side-row {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .reverse {
+                direction: rtl;
+            }
+
+            .reverse > * {
+                direction: ltr;
+            }
+        }
+
+        .side-img {
+            width: 100%;
+            height: 380px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        /* ANIMATION STYLES */
+        .animate {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.9s ease-out;
+        }
+
+        .animate.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-left {
+            transform: translateX(-60px);
+        }
+
+        .slide-right {
+            transform: translateX(60px);
+        }
+
+        .slide-left.show,
+        .slide-right.show {
+            transform: translateX(0);
+        }
+    </style>
+
+    <!-- CONTENT WRAPPER -->
+    <section class="tw-relative tw-flex tw-flex-col tw-gap-16 tw-w-full tw-max-w-[1200px] tw-mx-auto tw-px-6 tw-py-16">
+
+        <!-- 1️⃣ IMAGE | CONTENT -->
+        <div class="side-row animate slide-left">
+            <img src="./assets/images/home/sdimag.jpg" alt="Department Website Certificate" class="side-img">
+
+            <div>
+                <h2 class="tw-text-3xl tw-font-bold tw-mb-4">
+                    Department Website Development
+                </h2>
+                <p class="tw-text-[#595959] tw-mb-4">
+                    Successfully designed and developed the official department website
+                    using Django. The project included features for managing student data,
+                    announcements, and academic resources, and was recognized with a
+                    certificate of appreciation.
+                </p>
+
+                <div class="tw-flex tw-flex-wrap tw-gap-2">
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Django</span>
+                    <span class="tech-tag">MySQL</span>
+                    <span class="tech-tag">Tailwind CSS</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2️⃣ CONTENT | IMAGE -->
+        <div class="side-row reverse animate slide-right">
+            <img src="./assets/images/home/pp.jpeg" alt="President of Computer Science Department" class="side-img">
+
+            <div>
+                <h2 class="tw-text-3xl tw-font-bold tw-mb-4">
+                    President – Computer Science Department
+                </h2>
+                <p class="tw-text-[#595959] tw-mb-4">
+                    Served as the President of the Computer Science Department, leading
+                    student initiatives, coordinating academic and technical events, and
+                    representing the department in official functions. This role enhanced
+                    my leadership, communication, and organizational skills.
+                </p>
+
+                <div class="tw-flex tw-flex-wrap tw-gap-2">
+                    <span class="tech-tag">Leadership</span>
+                    <span class="tech-tag">Event Management</span>
+                    <span class="tech-tag">Team Coordination</span>
+                    <span class="tech-tag">Communication</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3️⃣ IMAGE | CONTENT -->
+        <div class="side-row animate slide-left">
+            <img src="./assets/images/home/simage.jpeg" alt="Technical Seminars on Web Development and Python" class="side-img">
+
+            <div>
+                <h2 class="tw-text-3xl tw-font-bold tw-mb-4">
+                    Technical Seminars & Training Sessions
+                </h2>
+                <p class="tw-text-[#595959] tw-mb-4">
+                    Conducted more than 50 technical seminars and workshops for over
+                    300 students at a time, focusing on Web Development, Python
+                    programming, and modern technologies. These sessions emphasized
+                    hands-on learning and real-world applications.
+                </p>
+
+                <div class="tw-flex tw-flex-wrap tw-gap-2">
+                    <span class="tech-tag">Web Development</span>
+                    <span class="tech-tag">Python</span>
+                    <span class="tech-tag">Technical Training</span>
+                    <span class="tech-tag">Public Speaking</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="side-row reverse animate slide-right">
+    <img src="./assets/images/home/s2.jpeg" alt="Chief Guest – Computer Science Department" class="side-img">
+
+    <div>
+        <h2 class="tw-text-3xl tw-font-bold tw-mb-4">
+            Chief Guest & President – Computer Science Department
+        </h2>
+        <p class="tw-text-[#595959] tw-mb-4">
+            Served as the President of the Computer Science Department and acted as the
+            Chief Guest for an interdepartmental academic session. The program focused on
+            encouraging students from various departments to participate in shared
+            learning experiences, academic discussions, and collaborative initiatives.
+            This role involved delivering an address, coordinating with faculty members,
+            and fostering interdisciplinary engagement, strengthening leadership,
+            public speaking, and organizational skills.
+        </p>
+
+        <div class="tw-flex tw-flex-wrap tw-gap-2">
+            <span class="tech-tag">Leadership</span>
+            <span class="tech-tag">Public Speaking</span>
+            <span class="tech-tag">Event Management</span>
+            <span class="tech-tag">Interdepartmental Coordination</span>
+            <span class="tech-tag">Communication</span>
+        </div>
+    </div>
+</div>
+
+    </section>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+
+        document.querySelectorAll(".animate").forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+
+</section>
+
+         
+
+        <!-- code pannu da daiiiiii? -->
+
+
+
+    </section>
+
+    <hr class="tw-mt-4" />
+
+    <footer
+        class="tw-mt-auto tw-flex tw-min-h-[100px] tw-w-full tw-place-content-around tw-place-items-center tw-gap-3 tw-p-[2%] tw-px-[10%] tw-text-black max-md:tw-flex-col">
+        <div class="tw-flex tw-gap-6 tw-text-2xl tw-items-center">
+            <!-- GitHub -->
+            <a href="" class="tw-h-[40px] tw-w-[40px] tw-flex tw-items-center tw-justify-center" aria-label="Github">
+                <i class="bi bi-github"></i>
+            </a>
+
+            <!-- LinkedIn -->
+            <a href="" class="tw-h-[40px] tw-w-[40px] tw-flex tw-items-center tw-justify-center" aria-label="Linked-in">
+                <i class="bi bi-linkedin"></i>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/9360978079?text=Hi%20there!"
+                class="tw-h-[40px] tw-w-[40px] tw-flex tw-items-center tw-justify-center" aria-label="Whatsapp">
+                <i class="bi bi-whatsapp"></i>
+            </a>
+
+        </div>
+    </footer>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/gsap.min.js"
+    integrity="sha512-B1lby8cGcAUU3GR+Fd809/ZxgHbfwJMp0jLTVfHiArTuUt++VqSlJpaJvhNtRf3NERaxDNmmxkdx2o+aHd4bvw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/ScrollTrigger.min.js"
+    integrity="sha512-AY2+JxnBETJ0wcXnLPCcZJIJx0eimyhz3OJ55k2Jx4RtYC+XdIi2VtJQ+tP3BaTst4otlGG1TtPJ9fKrAUnRdQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="./index.js"></script>
+
+</html>

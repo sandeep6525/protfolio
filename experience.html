@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Experience - Portfolio</title>
+        <meta name="description" content="Deepak's professional work experience and internships." />
+        <link rel="shortcut icon" href="./assets/briefcase.png" type="image/x-icon" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="Experience - Portfolio" />
+        <meta property="og:description" content="Deepak's professional work experience and internships." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/PaulleDemon" />
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="./css/tailwind-build.css" />
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" />
+        
+        <style>
+            .experience-card {
+                background-color: #f3f3f3;
+                border-radius: 10px;
+                padding: 30px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .experience-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .company-logo {
+                width: 60px;
+                height: 60px;
+                margin-bottom: 20px;
+            }
+            
+            /* Fix for mobile menu */
+            @media (max-width: 1024px) {
+                .collapsible-header {
+                    position: absolute;
+                    top: 60px;
+                    right: 0;
+                    background-color: white;
+                    padding: 15px;
+                    width: 100%;
+                    max-width: 300px;
+                    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+                    z-index: 30;
+                    display: none;
+                }
+                
+                .collapsible-header.active {
+                    display: block;
+                }
+                
+                /* Ensure links are properly displayed */
+                .max-lg\:tw-place-items-end {
+                    width: 100%;
+                }
+                
+                /* Add more space between menu items */
+                .max-lg\:tw-gap-5 > a {
+                    margin-bottom: 8px;
+                    display: block;
+                    width: 100%;
+                    text-align: left;
+                }
+                
+                /* Adjust position of contact button */
+                .max-md\:tw-place-content-center {
+                    align-items: flex-start;
+                    margin-top: 10px;
+                }
+                
+                /* Add more top padding to the main content */
+                main {
+                    padding-top: 80px !important;
+                }
+            }
+            
+        </style>
+    </head>
+    <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+        <header class="tw-fixed tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-white tw-shadow-sm tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around">
+            <a class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium" href="index.html">
+                Portfolio
+            </a>
+            <div class="collapsible-header animated-collapse max-lg:tw-shadow-md" id="collapsed-header-items">
+                <div class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-start max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center">
+                    <a class="header-links tw-block" href="index.html">About Me</a>
+                    <a class="header-links tw-block" href="skills.html">Skills</a>
+                    <a class="header-links tw-block" href="project.html">Projects</a>
+                    <a class="header-links tw-block" href="resume.html">Resume</a>
+                </div>
+                <div class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-start tw-mt-4">
+                    <a href="Contact.html" aria-label="contact" class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white">
+                        <span>Contact Me</span>
+                        <div class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <button class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden" onclick="toggleHeader()" aria-label="menu" id="collapse-btn"></button>
+        </header>
+
+        <!-- Experience Section -->
+        <main class="tw-flex tw-flex-col tw-gap-12 tw-px-[5%] tw-py-8 tw-pt-[100px]">
+            <body class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono">
+
+        <!-- HEADER (UNCHANGED) -->
+        
+
+        <!-- EXPERIENCE -->
+        <main class="tw-flex tw-flex-col tw-gap-12 tw-px-[5%] tw-py-8 tw-pt-[100px]">
+            <section class="tw-max-w-[1200px] tw-mx-auto tw-w-full">
+                <h1 class="tw-text-4xl tw-font-bold tw-mb-8 tw-text-center">
+                    Work Experience
+                </h1>
+
+                <div class="tw-grid tw-grid-cols-1 md:tw-grid-cols-2 lg:tw-grid-cols-3 tw-gap-8">
+
+                    <!-- EXPERIENCE 1 -->
+                    <div class="experience-card">
+                        <i class="bi bi-briefcase-fill tw-text-4xl tw-mb-4"></i>
+                        <span class="tw-text-xl tw-font-bold tw-mb-2">
+                            Full Stack Web Development Trainee
+                        </span>
+                        <h4 class="tw-font-medium tw-mb-2">
+                            8Queens Software Technology, Chennai
+                        </h4>
+                        <p class="tw-text-gray-600 tw-mb-4">
+                            Jan 2023 – Mar 2023
+                        </p>
+                        <ul class="tw-list-disc tw-list-inside tw-text-gray-600">
+                            <li>• Gained hands-on experience in full-stack web development using frontend and backend technologies.</li>
+                            <li>• Designed and developed responsive, user-friendly web pages following UI best practices.</li>
+                            <li>• Collaborated with team members to build structured and maintainable web applications.</li>
+                        </ul>
+                    </div>
+
+                    <!-- EXPERIENCE 2 -->
+                    <div class="experience-card">
+                        <i class="bi bi-briefcase-fill tw-text-4xl tw-mb-4"></i>
+                        <span class="tw-text-xl tw-font-bold tw-mb-2">
+                            Junior Trainee
+                        </span>
+                        <h4 class="tw-font-medium tw-mb-2">
+                            United Soft Tech, Salem
+                        </h4>
+                        <p class="tw-text-gray-600 tw-mb-4">
+                            2023
+                        </p>
+                        <ul class="tw-list-disc tw-list-inside tw-text-gray-600">
+                            <li>• Trained in software development methodologies, coding standards, and application workflows.</li>
+                            <li>• Assisted in development, testing, and debugging of real-time projects.</li>
+                            <li>• Contributed to organizational projects and received a monthly stipend.</li>
+                        </ul>
+                    </div>
+
+                    <!-- EXPERIENCE 3 -->
+                    <div class="experience-card">
+                        <i class="bi bi-briefcase-fill tw-text-4xl tw-mb-4"></i>
+                        <span class="tw-text-xl tw-font-bold tw-mb-2">
+                            Academic Project Experience
+                        </span>
+                        <h4 class="tw-font-medium tw-mb-2">
+                            Sona College of Arts and Science
+                        </h4>
+                        <p class="tw-text-gray-600 tw-mb-4">
+                            2023 – 2024
+                        </p>
+                        <ul class="tw-list-disc tw-list-inside tw-text-gray-600">
+                            <li>• Developed a Department Website using Python (Django), HTML, CSS, Tailwind CSS, and SQL.</li>
+                            <li>• Built an Online Turf Booking System with authentication, booking management, and admin controls.</li>
+                            <li>• Designed responsive user interfaces ensuring smooth user experience across devices.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+
+        <script src="./index.js"></script>
+    </body>
+        </main>
+
+        <!-- JavaScript for toggling mobile menu -->
+        <script>
+            function toggleHeader() {
+                const headerItems = document.getElementById('collapsed-header-items');
+                headerItems.classList.toggle('active');
+            }
+            
+            // Close menu when clicking outside
+            document.addEventListener('click', function(event) {
+                const header = document.querySelector('header');
+                const collapseBtn = document.getElementById('collapse-btn');
+                const headerItems = document.getElementById('collapsed-header-items');
+                
+                if (!header.contains(event.target) || (event.target !== collapseBtn && !headerItems.contains(event.target))) {
+                    headerItems.classList.remove('active');
+                }
+            });
+        </script>
+    </body>
+    <script src="./index.js"></script>
+</html>

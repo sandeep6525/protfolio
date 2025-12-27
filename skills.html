@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Skills - Portfolio</title>
+        <meta name="description" content="Explore Deepak's skills and expertise in various technologies and tools." />
+        <link
+            rel="shortcut icon"
+            href="./assets/briefcase.png"
+            type="image/x-icon"
+        />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:title" content="Skills - Portfolio" />
+        <meta property="og:description" content="Explore Deepak's skills and expertise in various technologies and tools." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://github.com/PaulleDemon" />
+        <!--Replace with the current website URL-->
+        <meta property="og:image" content="" />
+
+        <link rel="stylesheet" href="./css/tailwind-build.css" />
+        <link rel="stylesheet" href="css/index.css" />
+
+        <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css"
+            integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+
+        <style>
+            /* Skill Card Styling */
+            .skill-card {
+                background-color: #f3f3f3;
+                border-radius: 10px;
+                padding: 20px;
+                text-align: center;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .skill-card:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            }
+
+            .skill-card i {
+                font-size: 40px;
+                color: #333;
+                margin-bottom: 10px;
+            }
+
+            .skill-card h3 {
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+
+            .skill-card p {
+                font-size: 14px;
+                color: #555;
+            }
+        </style>
+    </head>
+    <body
+        class="tw-flex tw-min-h-[100vh] tw-flex-col tw-bg-[#fff] tw-font-mono"
+    >
+        <header
+            class="tw-absolute tw-top-0 tw-z-20 tw-flex tw-h-[60px] tw-w-full tw-bg-opacity-0 tw-px-[5%] max-lg:tw-mr-auto max-lg:tw-px-4 lg:tw-justify-around"
+        >
+            <a
+                class="tw-h-[50px] tw-p-[4px] tw-text-2xl tw-font-medium"
+                href="index.html"
+            >
+                Portfolio
+            </a>
+            <div
+                class="collapsible-header animated-collapse max-lg:tw-shadow-md"
+                id="collapsed-header-items"
+            >
+                <div
+                    class="tw-flex tw-h-full tw-w-max tw-gap-5 tw-text-base tw-text-black max-lg:tw-mt-[30px] max-lg:tw-flex-col max-lg:tw-place-items-end max-lg:tw-gap-5 lg:tw-mx-auto lg:tw-place-items-center"
+                >
+                    <a class="header-links" href="index.html"> About Me </a>
+                    <a class="header-links" href="experience.html"> Experience </a>
+                    <a class="header-links" href="project.html"> Projects </a>
+                    <a class="header-links" href="resume.html"> Resume </a>
+                </div>
+                <div
+                    class="tw-mx-4 tw-flex tw-place-items-center tw-gap-[20px] tw-text-base max-md:tw-w-full max-md:tw-flex-col max-md:tw-place-content-center"
+                >
+                    <a
+                        href="Contact.html"
+                        aria-label="contact"
+                        class="tw-flex tw-h-[40px] tw-place-items-center tw-gap-2 tw-rounded-full tw-bg-black tw-p-1 tw-pl-4 tw-text-white"
+                    >
+                        <span>Contact Me</span>
+                        <div
+                            class="tw-flex tw-h-[30px] tw-w-[30px] tw-place-content-center tw-place-items-center tw-rounded-full tw-bg-white tw-font-semibold tw-text-black"
+                        >
+                        <i class="bi bi-telephone"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <!-- Below button tag line is for mobile view -->
+            <button
+                class="bi bi-list tw-absolute tw-right-3 tw-top-3 tw-z-50 tw-text-3xl tw-text-black lg:tw-hidden"
+                onclick="toggleHeader()"
+                aria-label="menu"
+                id="collapse-btn"
+            ></button>
+        </header>
+
+        <!-- Skills Hero Section -->
+        <section
+            class="tw-relative tw-flex tw-min-h-[50vh] tw-w-full tw-max-w-[100vw] tw-flex-col tw-overflow-hidden tw-pt-[80px] max-lg:tw-p-4 max-md:tw-mt-[50px]"
+        >
+            <div
+                class="tw-flex tw-h-full tw-w-full tw-flex-col tw-place-items-center tw-gap-6 tw-p-[5%]"
+            >
+                <h1 class="reveal-hero-text tw-text-5xl tw-font-bold max-md:tw-text-3xl">My Skills</h1>
+                <p class="reveal-hero-text tw-max-w-[600px] tw-text-center tw-text-lg tw-text-gray-600">
+                    Here's a list of my technical skills and expertise in various tools and technologies.
+                </p>
+            </div>
+        </section>
+
+        
+
+        <!-- Skills Section -->
+        <section class="tw-flex tw-w-full tw-flex-col tw-place-items-center tw-px-[5%] tw-py-10 max-lg:tw-px-4">
+            <div class="tw-grid tw-w-full tw-max-w-[1200px] tw-grid-cols-3 tw-gap-6 max-lg:tw-grid-cols-2 max-md:tw-grid-cols-1">
+                <!-- Skill 1 -->
+                <div class="skill-card">
+                    <i class="bi bi-code-slash"></i>
+                    <h3>Programming</h3>
+                    <p>Proficient in Python, Java, JavaScript, and R with extensive experience in developing efficient and scalable applications.</p>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill-card">
+                    <i class="bi bi-laptop"></i>
+                    <h3>Web Development</h3>
+                    <p>Experienced in building responsive websites using HTML, CSS, JavaScript, Bootstrap, and Tailwind CSS frameworks for modern and intuitive user interfaces.</p>
+                </div>
+
+                <!-- Skill 3 -->
+                <div class="skill-card">
+                    <i class="bi bi-bar-chart"></i>
+                    <h3>Data Analysis</h3>
+                    <p>Skilled in analyzing and visualizing data using Python, Excel implementing ETL processes for comprehensive data transformation.</p>
+                </div>
+
+                <!-- Skill 4 -->
+                <div class="skill-card">
+                    <i class="bi bi-database"></i>
+                    <h3>SQL & MongoDB</h3>
+                    <p>Proficient in designing, querying, and optimizing both SQL and NoSQL databases to efficiently store and retrieve data.</p>
+                </div>
+
+                <!-- Skill 5 -->
+                <div class="skill-card">
+                    <i class="bi bi-graph-up"></i>
+                    <h3>Pandas & NumPy</h3>
+                    <p>Expert in utilizing Python's powerful data framing & manipulation libraries for data cleaning, transformation, and advanced statistical analysis.</p>
+                </div>
+
+                <!-- Skill 6 -->
+                <div class="skill-card">
+                    <i class="bi bi-github"></i>
+                    <h3>Version Control & Git</h3>
+                    <p>Experienced in collaborative development using GitHub for efficient code management, pull requests, issue tracking, and CI/CD integration through GitHub Actions.</p>
+                </div>
+            </div>
+        </section>
+    </body>
+    <script src="./index.js"></script>
+</html>
